@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBot - AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <h2>🤖 SmartBot</h2>
+        <button onclick="clearChat()">+ New Chat</button>
+        <p>Your Personal AI Assistant</p>
+        <div class="sidebar-bottom">Powered by Python & Flask</div>
+    </aside>
+
+    <main class="chat-section">
+
+        <header class="header">
+            <h2>SmartBot Assistant</h2>
+            <span>● Online</span>
+        </header>
+
+        <div class="chat-box" id="chatBox">
+            <div class="message bot-message">
+                <div class="avatar">🤖</div>
+                <div class="message-content">
+                    Hello! Welcome to SmartBot. 👋<br>
+                    How can I help you today?
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userInput"
+                   placeholder="Type your message here..."
+                   autocomplete="off">
+
+            <button onclick="sendMessage()">➤</button>
+        </div>
+
+        <p class="footer-text">SmartBot can make mistakes. Check important information.</p>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<button onclick="clearChat()" style="background: white; color: black; padding: 12px; font-size: 16px;">
+    Clear Chat
+</button>
+</body>
+</html>
